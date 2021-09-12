@@ -1,0 +1,23 @@
+# docker-compose.yml file
+version: '3'
+
+services:
+  # Load balancer
+  nginx:
+    image: nginx:1.16.0-alpine
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "8080:80"
+
+  # Server 1
+  server1:
+    image: nginx:1.16.0-alpine
+    volumes:
+      - ./app:/usr/share/nginx/html
+
+  # Server 2
+  server2:
+    image: nginx:1.16.0-alpine
+    volumes:
+      - ./app:/usr/share/nginx/html
