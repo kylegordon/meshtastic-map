@@ -21,3 +21,16 @@ services:
     image: nginx:1.16.0-alpine
     volumes:
       - ./app:/usr/share/nginx/html
+
+  eclipse-mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: eclipse-mosquitto
+    restart: unless-stopped
+    network_mode: host
+    # ports:
+    #   - 1883:1883
+    #   - 9001:9001
+    volumes:
+        - ./mosquitto-bridge/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+        - ./mosquitto-bridge/data:/mosquitto/data
+        - ./mosquitto-bridge/log:/mosquitto/log
