@@ -9,8 +9,8 @@ WORKDIR /usr/src/app
 #COPY app/package*.json ./
 COPY app /usr/src/app
 
-RUN npm install -g browserify
 RUN pwd ; ls -ltr
+RUN npm install -g browserify
 RUN npm install --loglevel verbose ; browserify webmap.js -o public/javascripts/webmap.js
 # If you are building your code for production
 # RUN npm ci --only=production
