@@ -6,9 +6,12 @@ WORKDIR /usr/src/app
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-COPY app/package*.json ./
+#COPY app/package*.json ./
+COPY app /usr/src/app
 
-RUN cd app ; npm install
+RUN npm install -g browserify
+RUN pwd ; ls -ltr
+RUN npm install --loglevel verbose ; browserify webmap.js -o public/javascripts/webmap.js
 # If you are building your code for production
 # RUN npm ci --only=production
 
@@ -16,4 +19,4 @@ RUN cd app ; npm install
 COPY app/. .
 
 EXPOSE 8080
-CMD [ "node", "server.js" ]
+CMD [ "node", "bin/www" ]
