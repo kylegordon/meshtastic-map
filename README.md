@@ -10,11 +10,11 @@ The 'local' eclipse-mosquitto instance bridges the TCP based MQTT protocol at mq
 
 ### Notes ###
 
-Leaflet marker balloons - https://rikdeboer.medium.com/leaflet-maps-marker-fun-games-53d81fdd2f52
-Leaflet intro https://maptimeboston.github.io/leaflet-intro/
-Leaflet and NodeJS Express - https://github.com/ryerson-ggl/tutorial-express-leaflet
-Leaflet, NodeJS and MongoDB - https://deneli.us/a-leaflet-map-with-node-js-and-mongodb/
-
+    Leaflet marker balloons - https://rikdeboer.medium.com/leaflet-maps-marker-fun-games-53d81fdd2f52
+    Leaflet intro https://maptimeboston.github.io/leaflet-intro/
+    Leaflet and NodeJS Express - https://github.com/ryerson-ggl/tutorial-express-leaflet
+    Leaflet, NodeJS and MongoDB - https://deneli.us/a-leaflet-map-with-node-js-and-mongodb/
+    Background processing in NodeJS - https://www.zeolearn.com/magazine/background-processing-in-node-js
 
 ### Example Message ###
 
