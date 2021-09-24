@@ -8,6 +8,12 @@ while true; do mosquitto_pub -h 172.24.32.13 -t 'mgdm/geo' -m '{"lat": 55.9,"lon
 
 The 'local' eclipse-mosquitto instance bridges the TCP based MQTT protocol at mqtt.meshtastic.org to a WebSockets enabled server running locally
 
+### Building ###
+Execute ./build.sh
+
+### Running ###
+docker-compose up
+
 ### Notes ###
 
     Leaflet marker balloons - https://rikdeboer.medium.com/leaflet-maps-marker-fun-games-53d81fdd2f52
